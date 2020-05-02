@@ -13,7 +13,22 @@ script:
   # we add -- --coverage to make sure npm exits when the test suit is done.
   - docker run -e CI=true sergiopichardo/docker-react npm run test -- --coverage
 
-
-
-
-
+deploy: 
+  provider: elasticbeanstalk 
+  region: us-east-1
+  app: docker-react-app
+  # These two keys have to be stored as environment variables in 
+  # travis ci platform
+  access_key_id:
+    secure: $AWS_ACCESS_KEY_ID
+  secret_access_key:
+    secure: $AWS_SECRET_ACCESS_KEY
+  env: docker-react-app
+  # This s3 bucket is automatically generated when you launch 
+  # a new elastic beanstalk environment (check S3 for the name of the bucket)
+  bucket_name: elasticbeanstalk-us-east-1-905939075673
+  # By default the bucket path you have to use is going to be equal to the 'app' name.
+  bucket_path: docker-react-app
+  # Only deploy code when the branch is "master"
+  on: 
+    branch: master
