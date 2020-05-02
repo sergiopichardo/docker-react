@@ -16,7 +16,7 @@
         "test": "react-scripts test",
         "eject": "react-scripts eject",
         "clean": "rm -rf ./www && rm -rf ./build || true",
-        "pack": "npm run clean && npm run build && mkdir www/ && cp package*.json www/ && cp public/ www/ && cp src/ www/ && cp Dockerfile && cp Dockerrun.aws.json && cd www/ && zip -r Archive.zip . && cd .."
+        "pack": "npm run clean && mkdir www/ && cp package*.json www/ && cp -r public/ www/public && cp -r src/ www/src && cp Dockerfile www/Dockerfile && cp Dockerrun.aws.json www/Dockerrun.aws.json && cd www/ && zip -r Archive.zip . && cd .."
     },
     "eslintConfig": {
         "extends": "react-app"
