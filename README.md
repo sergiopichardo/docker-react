@@ -1,4 +1,6 @@
-# Frontend 
+[![Build Status](https://travis-ci.com/sergiopichardo/docker-react.svg?branch=master)](https://travis-ci.com/sergiopichardo/docker-react)
 
-Containerizing a react app for development and production **for learning purposes**. 
+# Docker React 
+
+Setting up Continuous Integration/Deployment with TravisCI (for learning purposes)
 
