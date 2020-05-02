@@ -14,7 +14,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "clean": "rm -rf www/ || true",
+    "package": "npm run clean && mkdir www/ && cp package.json www/package.json && cp -r build www && cd www && zip -r docker-react.zip . && cd .."
   },
   "eslintConfig": {
     "extends": "react-app"
