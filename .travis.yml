@@ -1,0 +1,18 @@
+sudo: required 
+services: 
+  - docker 
+
+# before we install the required dependencies
+# Execute the following commands before we run our tests
+# docker-react is the name of the repo
+before_install:
+  - docker build --tag sergiopichardo/docker-react --file Dockerfile.dev . 
+
+script:  
+  # we add -- --coverage to make sure npm exits when the test suit is done.
+  - docker run --environment CI=true sergiopichardo/docker-react npm run test -- --coverage
+
+
+
+
+
