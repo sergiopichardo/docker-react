@@ -20,3 +20,5 @@ build-prod:
 run-prod: 
 	docker run -it -p 8080:80 --rm --name docker-react sergiopichardo/docker-react
 
+deploy: 
+	npm run pack && eb deploy
