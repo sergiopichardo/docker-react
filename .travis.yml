@@ -10,7 +10,7 @@ before_install:
 
 script:  
   # we add -- --coverage to make sure npm exits when the test suit is done.
-  - docker run --environment CI=true sergiopichardo/docker-react npm run test -- --coverage
+  - docker run -e CI=true sergiopichardo/docker-react npm run test -- --coverage
 
 
 
