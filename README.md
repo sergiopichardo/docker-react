@@ -32,6 +32,7 @@ AWS_ACCESS_KEY_ID=AWOEI2EXAMPLEGHAS0ASFJW039J
 AWS_SECRET_ACCESS_KEY=A0LASDExAmPl3FXXXJ2FJALKfj309WJF939239XX
 ```
 
+## Initial Elastic Beanstalk Setup
 
 ### Create an elastic beanstalk app
 Initializes your directory with the EB CLI. Creates the application.
@@ -75,20 +76,10 @@ $ eb create
 $ eb use <your_environment_name>
 ```
 
-
 ### Deploy your code into the elastic beanstalk environment
 ```sh 
 $ eb deploy
 ```
-
-
-### Instructions to run this project 
-<Will go here>
-
-
-### File descriptions 
-<Will go here>
-
 
 ### Testing Travis 
 Allow integration only on the `master` branch. 
@@ -104,6 +95,32 @@ $ git checkout -b feature
 ```sh
 $ git push origin feature
 ```
+
+#### 3. Checkout master 
+```sh
+$ git checkout master 
+```
+
+#### 4. Create pull request: `master` <-- feature (In GitHub)
+Wait until all tests are run by TravisCI and pass successfully
+
+#### 5. Merge changes to master (In Github)
+Click on `Merge pull request`, and click `Confirm merge`.
+- Travis will now deploy code from master branch into production 
+using Elastic Beanstalk
+
+#### 6. Pull for changes (In your dev environment)
+Make sure you are in the `master` branch when you pull for changes.
+```sh
+$ git pull
+```
+
+#### 7. Remove branch 
+```sh
+$ git branch -d feature
+```
+
+
 
 
 
