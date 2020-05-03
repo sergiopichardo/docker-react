@@ -83,4 +83,16 @@ $ eb deploy
 <Will go here>
 
 
+### Testing Travis 
+Allow integration only on the `master` branch. 
+To check this works, create a new branch called `feature` and switch to it, 
+push the branch to remote and see if travis deploys your code.
+
+```sh
+$ git checkout -b feature
+```
+
+
+
+
 
