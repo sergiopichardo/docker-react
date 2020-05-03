@@ -35,11 +35,12 @@ AWS_SECRET_ACCESS_KEY=A0LASDExAmPl3FXXXJ2FJALKfj309WJF939239XX
 
 ### Create an elastic beanstalk app
 Initializes your directory with the EB CLI. Creates the application.
+We don't really need this command b/c there's a an elastic beanstalk `config.yml` file.
 ```sh
 $ eb init
 ```
 
-Also add the following code inside your .elasticbeanstalk/config.yml
+Add the following code inside your .elasticbeanstalk/config.yml
 ```yml
 branch-defaults:
   deploy:
@@ -68,6 +69,12 @@ global:
 ```sh
 $ eb create
 ```
+
+### Choose your environment 
+```
+$ eb use <your_environment_name>
+```
+
 
 ### Deploy your code into the elastic beanstalk environment
 ```sh 
