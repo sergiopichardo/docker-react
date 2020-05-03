@@ -10,6 +10,11 @@ Setting up Continuous Integration/Deployment with TravisCI (for learning purpose
 $ brew install awsebcli
 ```
 
+## Create a new IAM user 
+```sh
+$ aws iam create-user --user-name <the_name_of_your_user>
+```
+
 ### `eb init`
 Initializes your directory with the EB CLI. Creates the application.
 ```sh
@@ -63,3 +68,4 @@ $ eb deploy
 
 
 ## Instructions for Travis CI setup
+<>
