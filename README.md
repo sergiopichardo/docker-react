@@ -107,7 +107,7 @@ $ git push origin feature
 $ git checkout master 
 ```
 
-#### 4. Create pull request: `master` <-- feature (In GitHub)
+#### 4. Create pull request: `master` <-- `feature` (In GitHub)
 Wait until all tests are run by TravisCI and pass successfully
 
 #### 5. Merge changes to master (In Github)
