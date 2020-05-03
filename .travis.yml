@@ -17,7 +17,7 @@ deploy:
   provider: "elasticbeanstalk"
   region: "us-east-1"
   app: "docker-react-app"
-  env: "docker-react-env"
+  env: "docker-react-app"
   # This s3 bucket is automatically generated when you launch 
   # a new elastic beanstalk environment (check S3 for the name of the bucket)
   bucket_name: "elasticbeanstalk-us-east-1-905939075673"
