@@ -81,6 +81,12 @@ $ eb use <your_environment_name>
 $ eb deploy
 ```
 
+### Deleting Elastic Beanstalk Environment and Application
+NOTE: this will remove the environment name from your `.elasticbeanstalk/config.yml` file.
+```sh 
+$ eb terminate
+```
+
 ### Testing Travis 
 Allow integration only on the `master` branch. 
 To check this works: 
