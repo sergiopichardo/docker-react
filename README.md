@@ -4,18 +4,18 @@
 
 Setting up Continuous Integration/Deployment with TravisCI (for learning purposes)
 
-## Launching an Environment and An Application with `eb` cli
+
 ### Install Elastic Beanstalk CLI 
 ```sh
 $ brew install awsebcli
 ```
 
-## Create a new IAM user 
+### Create a new IAM user
 ```sh
 $ aws iam create-user --user-name <the_name_of_your_user>
 ```
 
-### `eb init`
+### Create an elastic beanstalk app
 Initializes your directory with the EB CLI. Creates the application.
 ```sh
 $ eb init
@@ -27,7 +27,7 @@ branch-defaults:
   deploy:
     artifact: ./www/Archive.zip
   master:
-    environment: <your_app_name>-environment
+    environment: <your_app_name_environment_name>
     group_suffix: null
 global:
   application_name: <your_app_name>
@@ -46,26 +46,24 @@ global:
 ```
 
 
-### `eb create`
-Create a new environment
+### Create a new elastic beanstalk environment
 ```sh
 $ eb create
 ```
 
-### `eb deploy`
-Deploys your source code to the environment 
+### Deploy your code into the elastic beanstalk environment
 ```sh 
 $ eb deploy
 ```
 
 
-## Instructions to run this project 
+### Instructions to run this project 
 <Will go here>
 
 
-## File descriptions 
+### File descriptions 
 <Will go here>
 
 
 ## Instructions for Travis CI setup
-<>
+<Will go here>
