@@ -29,5 +29,4 @@ deploy:
   # These two keys have to be stored as environment variables in 
   # travis ci platform, you must create a new IAM user to get these credentials.
   access_key_id: "$AWS_ACCESS_KEY_ID"
-  secret_access_key: 
-    secure: "$AWS_SECRET_ACCESS_KEY"
+  secret_access_key: "$AWS_SECRET_ACCESS_KEY"
