@@ -11,9 +11,27 @@ $ brew install awsebcli
 ```
 
 ### Create a new IAM user
+1. Go to the AWS console and search for IAM 
+2. Create a new user with programmatic access 
+3. Attach this policy `AWSElasticBeanstalkFullAccess`
+4. Download your `credentials.csv` file
+
+## Instructions for Travis CI setup
+After you have setup your IAM user, you must add 2 environment 
+variables using the TravisCI user interface. You'll gain access
+to the environment variables page by clicking on the settings 
+icon of your current project being run by TravisCI. 
+
+### Your AWS Access Key Id 
 ```sh
-$ aws iam create-user --user-name <the_name_of_your_user>
+AWS_ACCESS_KEY_ID=AWOEI2GHAS0ASFJW039J
 ```
+
+### Your AWS Secret Access KEy
+```sh
+AWS_SECRET_ACCESS_KEY=Alaksf0LASDFXXXJ2FJALKFJ309WJF939239XX
+```
+
 
 ### Create an elastic beanstalk app
 Initializes your directory with the EB CLI. Creates the application.
@@ -65,5 +83,4 @@ $ eb deploy
 <Will go here>
 
 
-## Instructions for Travis CI setup
-<Will go here>
+
